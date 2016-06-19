@@ -50,11 +50,9 @@ dim(merged_test)
 append_data<-rbind(merged_train,merged_test)
 
 #2.Extract mean & std for each measurement 
-#The index is plus one because id is the first variable
 aux_measurement_index_mean<-grep("mean",names)
 aux_measurement_index_std<-as.vector(grep("std",names))
 measurement_index<-c(aux_measurement_index_mean,aux_measurement_index_std)
-#col_key<-match("key", names(append_data))
 col_type<-match("type", names(append_data))
 col_labels<-match("labels", names(append_data))
 col_subject<-match("subject", names(append_data))
