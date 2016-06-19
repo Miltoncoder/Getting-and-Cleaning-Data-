@@ -24,13 +24,8 @@ aux_merged_train<-merge(data_X_train,data_Y_train, by="key")
 merged_train<-merge(aux_merged_train,data_subject_train, by="key")
 #Read testing data 
 data_X_test<- read.table("X_test.txt",header=FALSE)
-#**
 #add features identifiers
-#**
-#cambiar nombre a _test para no pisar el anterior, poner al anterior features_train
 features_test<-read.table("features.txt",header=FALSE)
-#tiene los nom
-#**
 names<-features_test$V2
 names(data_X_test)<-names
 #add subject id and type id
